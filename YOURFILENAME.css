@@ -1,1 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* COLOR PALETTE USED:
+Chiefs red #872341
+Chiefs yellow #FFB612 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000000;
+  font-family: "Roboto", Verdana, Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: fit-content;
+}
+header {
+  background-color: #872341;
+  padding: 1rem;
+  background-image: url('');
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: top 5px left 50px;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-family: "Roboto", Georgia, serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  margin: 0;
+  color: #FBFBFB;
+}
+nav {
+  background-color: #BE3144;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:link {
+  color: black;
+}
+
+nav a:visited {
+  color: #8174A0;
+}
+
+nav a:hover {
+  color: #8174A0;
+}
+.mynav {
+padding: 0.5rem 0.5rem;
+}
+/*nav a {
+  margin: 1rem 1rem;
+}*/
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+section {
+  background-image: linear-gradient(to bottom, black 20%, #BE3144 100%);
+}  
+.content {
+    padding: 2rem 3rem;
+  }
+
+img {
+  float: right;
+  margin: 2rem;
+}
+
+p {
+  margin-bottom: 0.25rem;
+}
+footer {
+  background-color: #872341;
+  font-size: .7rem;
+  font-style: italic;
+  padding: 1em;
+  text-align: center;
+}
+
+/* MEDIA QUERY FOR MOBILE */
+
+@media (max-width: 480px) {
+  section {
+    width: 0;
+  }
+  
+  img {
+    float: none;
+    margin: 0 auto 0 auto;
+    display: block;
+  }
+  
+  .content {
+    padding: 15px 30px;
+  }
+/* Used flexbox ordering to reorder my flex items when it is for a mobile device */
+
+nav {
+  order: 1;
+}
+
+header {
+  order: 2;
+}
+
+main {
+  order: 3;
+}
+
+footer {
+  order: 4;
+}
+/* HAMBURGER MENU THAT WORKS WITH JAVASCRIPT */
+
+.navbar-links {
+  flex-direction: column;
+}
+
+.mynav {
+  border-bottom: 1px solid black;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  /* ADDED A box-shadow so the lines stand out when scrolling */
+  box-shadow: 1px 1px black;
+}
+
+.toggle-button {
+  display: flex;
+}
+
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+}
+
+@media (max-width: 620px) {
+  header {
+    background-image: none;
+  }
+}
